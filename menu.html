@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerZone — Меню сайту</title>
+
+    <link id="menu-styles"
+          rel="stylesheet"
+          href="style.css"
+          media="screen"
+          charset="UTF-8"
+          sizes="16x16"
+          style="color: inherit;"
+          title="Стилі меню">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="pc-icon"></div>
+        ComputerZone
+    </div>
+
+    <nav class="site-nav">
+        <a href="index.html">Головна</a>
+        <a href="company.html">Комп'ютери</a>
+        <a href="news.html">Новини</a>
+        <a href="lists.html">Списки</a>
+        <a href="menu.html">Меню сайту</a>
+        <a href="tables.html">Таблиці</a>
+        <a href="forms.html">Форми</a>
+    </nav>
+</header>
+
+<main class="container menu-page">
+
+    <section class="menu-hero">
+        <h1>Меню ComputerZone</h1>
+        <p>Оберіть потрібний розділ сайту.</p>
+    </section>
+
+    <section class="menu-card" id="navigation">
+        <h2>Основні сторінки</h2>
+
+        <menu class="menu-links" type="list" dir="ltr">
+            <li>
+                <a href="index.html"
+                   title="Головна сторінка"
+                   accesskey="h"
+                   rel="home"
+                   target="_self">
+                    Головна сторінка
+                </a>
+            </li>
+
+            <li>
+                <a href="company.html"
+                   title="Каталог комп'ютерів"
+                   accesskey="c"
+                   rel="next"
+                   target="_self">
+                    Каталог комп'ютерів
+                </a>
+            </li>
+
+            <li>
+                <a href="news.html"
+                   title="Новини магазину"
+                   accesskey="n"
+                   target="_self">
+                    Новини магазину
+                </a>
+            </li>
+
+            <li>
+                <a href="lists.html"
+                   title="Списки підприємства"
+                   accesskey="l"
+                   target="_self">
+                    Списки підприємства
+                </a>
+            </li>
+        </menu>
+    </section>
+
+    <section class="menu-card" id="internal-links">
+        <h2>Внутрішні посилання</h2>
+
+        <ul class="menu-links">
+            <li><a href="#navigation">Основні сторінки</a></li>
+            <li><a href="#about">Інформація про сайт</a></li>
+            <li><a href="#contacts">Контактна інформація</a></li>
+        </ul>
+    </section>
+
+    <section class="menu-card" id="about">
+        <h2>Про сайт</h2>
+
+        <p>
+            ComputerZone — навчальний вебпроєкт про магазин
+            комп'ютерної техніки. Сайт містить каталог товарів,
+            новини, інформаційні списки та навігаційне меню.
+        </p>
+
+        <p>
+            Приклад коду товару:
+            <bdi id="menu-product-code">PC-2026</bdi>
+        </p>
+
+        <p>
+            <a href="lists.html#products">Переглянути категорії товарів</a>
+        </p>
+
+        <p>
+            <a href="lists.html#services">Переглянути послуги магазину</a>
+        </p>
+    </section>
+
+    <section class="menu-card" id="contacts">
+        <h2>Контактна інформація</h2>
+
+        <p>
+            <a href="index.html" rel="home">Повернутися на головну</a>
+        </p>
+
+        <p>
+            <a href="lists.html">Перейти до списків підприємства</a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    ComputerZone © 2026 | Меню сайту
+</footer>
+
+</body>
+</html>

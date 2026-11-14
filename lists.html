@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerZone — Списки</title>
+
+    <link id="main-styles"
+          rel="stylesheet"
+          href="style.css"
+          media="screen"
+          charset="UTF-8"
+          sizes="16x16"
+          style="color: inherit;"
+          title="Основні стилі">
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="pc-icon"></div>
+        ComputerZone
+    </div>
+
+    <nav class="site-nav">
+        <a href="index.html">Головна</a>
+        <a href="company.html">Комп'ютери</a>
+        <a href="news.html">Новини</a>
+        <a href="lists.html">Списки</a>
+        <a href="menu.html">Меню сайту</a>
+        <a href="tables.html">Таблиці</a>
+        <a href="forms.html">Форми</a>
+    </nav>
+</header>
+
+<main class="container lists-page">
+
+    <section class="lists-hero">
+        <h1>Інформація про ComputerZone</h1>
+
+        <div class="marquee-box">
+            <marquee bgcolor="#103b62"
+                     scrolldelay="120"
+                     class="moving-text"
+                     id="company-marquee"
+                     truespeed
+                     direction="left">
+                ComputerZone — комп'ютери для навчання, роботи та ігор!
+            </marquee>
+        </div>
+
+        <p>
+            ComputerZone — магазин комп'ютерної техніки,
+            що пропонує комп'ютери, комплектуючі та аксесуари.
+        </p>
+    </section>
+
+    <section class="list-card" id="products">
+        <h2>1. Категорії товарів</h2>
+
+        <ol class="number-list"
+            type="1"
+            start="1"
+            compact
+            style="list-style-type: decimal;">
+
+            <li start="1" type="1" title="Категорія 1" lang="uk">
+                Комп'ютери для навчання
+            </li>
+            <li start="2" type="1" title="Категорія 2" lang="uk">
+                Офісні комп'ютери
+            </li>
+            <li start="3" type="1" title="Категорія 3" lang="uk">
+                Ігрові комп'ютери
+            </li>
+            <li start="4" type="1" title="Категорія 4" lang="uk">
+                Комплектуючі та аксесуари
+            </li>
+        </ol>
+    </section>
+
+    <section class="list-card" id="advantages">
+        <h2>2. Переваги магазину</h2>
+
+        <ul id="benefits"
+            type="circle"
+            value="circle"
+            class="custom-list"
+            style="list-style-type: circle;">
+
+            <li value="1" class="benefit-item">
+                Великий вибір комп'ютерної техніки
+            </li>
+            <li value="2" class="benefit-item">
+                Допомога у виборі конфігурації
+            </li>
+            <li value="3" class="benefit-item">
+                Гарантія на товари
+            </li>
+            <li value="4" class="benefit-item">
+                Консультації щодо комплектуючих
+            </li>
+        </ul>
+    </section>
+
+    <section class="list-card" id="services">
+        <h2>3. Послуги магазину</h2>
+
+        <dl id="service-list" dir="ltr" class="definition-list">
+
+            <dt class="service-term"
+                id="service1"
+                title="Перша послуга"
+                style="color: #54baff;">
+                Підбір комп'ютера
+            </dt>
+            <dd dir="ltr" title="Допомога у виборі комп'ютера">
+                Допомога у виборі комп'ютера відповідно до потреб клієнта.
+            </dd>
+
+            <dt class="service-term"
+                id="service2"
+                title="Друга послуга"
+                style="color: #54baff;">
+                Модернізація
+            </dt>
+            <dd dir="ltr" title="Оновлення комп'ютера">
+                Заміна процесора, оперативної пам'яті та накопичувачів.
+            </dd>
+
+            <dt class="service-term"
+                id="service3"
+                title="Третя послуга"
+                style="color: #54baff;">
+                Консультація
+            </dt>
+            <dd dir="ltr" title="Консультація покупців">
+                Поради щодо характеристик і сумісності комплектуючих.
+            </dd>
+        </dl>
+    </section>
+
+    <section class="list-card" id="equipment">
+        <h2>4. Обладнання магазину</h2>
+
+        <dir title="Перелік обладнання" class="equipment-list">
+            <ul class="equipment-items">
+                <li>Настільні комп'ютери</li>
+                <li>Монітори</li>
+                <li>Клавіатури та миші</li>
+            </ul>
+        </dir>
+    </section>
+
+    <section class="list-card" id="commands">
+        <h2>5. Команди та коди товарів</h2>
+
+        <p>Приклад командного елемента з методички:</p>
+
+        <div class="command-example">
+            <command style="color: #54baff;" checked>
+                Переглянути каталог
+            </command>
+            <span>Переглянути каталог комп'ютерів</span>
+        </div>
+
+        <p>
+            Код товару:
+            <bdi id="product-code">CZ-2026-01</bdi>
+        </p>
+    </section>
+
+    <section class="list-card" id="links">
+        <h2>6. Гіперпосилання</h2>
+
+        <p>
+            <a href="company.html"
+               download="catalog.html"
+               rel="next"
+               target="_self"
+               accesskey="c"
+               rev="previous"
+               title="Відкрити каталог комп'ютерів">
+                Каталог комп'ютерів
+            </a>
+        </p>
+
+        <p>
+            <a href="index.html"
+               download
+               rel="home"
+               target="_self"
+               accesskey="h"
+               rev="previous">
+                Головна сторінка
+            </a>
+        </p>
+
+        <p>
+            <a href="menu.html#navigation"
+               rel="contents"
+               target="_self"
+               accesskey="m"
+               rev="previous">
+                Перейти до меню сайту
+            </a>
+        </p>
+    </section>
+
+    <p class="back-link">
+        <a href="menu.html">Повернутися до меню сайту</a>
+    </p>
+
+</main>
+
+<footer>
+    ComputerZone © 2026 | Списки підприємства
+</footer>
+
+</body>
+</html>

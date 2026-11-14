@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиці — ComputerZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>ComputerZone</h1>
+    <p>Комп'ютери та комплектуючі</p>
+</header>
+
+<nav>
+    <a href="index.html">Головна</a>
+    <a href="company.html">Про компанію</a>
+    <a href="news.html">Новини</a>
+    <a href="lists.html">Списки</a>
+    <a href="menu.html">Меню</a>
+    <a href="tables.html">Таблиці</a>
+</nav>
+
+<main>
+    <h2>Каталог комп'ютерної техніки</h2>
+
+    <p>
+        У таблицях наведено асортимент комп'ютерної техніки
+        та комплектуючих компанії ComputerZone.
+    </p>
+
+    <!-- Основна таблиця за структурою варіанта №2 -->
+
+    <table id="variant2-table"
+           title="Каталог комп'ютерної техніки"
+           lang="uk"
+           dir="ltr"
+           align="center">
+
+        <caption id="variant2-caption"
+                 title="Структура таблиці відповідно до варіанта 2"
+                 style="caption-side: top;">
+            Каталог комп'ютерної техніки
+        </caption>
+
+        <colgroup>
+            <col class="narrow-column" lang="uk">
+            <col class="wide-column" lang="uk">
+            <col class="normal-column" lang="uk">
+            <col class="normal-column" lang="uk">
+            <col class="wide-column" lang="uk">
+            <col class="normal-column" lang="uk">
+            <col class="normal-column" lang="uk">
+            <col class="narrow-column" lang="uk">
+        </colgroup>
+
+        <thead>
+            <tr valign="middle"
+                style="height: 45px;"
+                title="Верхній рядок заголовків"
+                lang="uk">
+
+                <th id="left-heading" scope="col" rowspan="2">
+                    №
+                </th>
+
+                <th id="computer-heading"
+                    scope="colgroup"
+                    colspan="3">
+                    Комп'ютери
+                </th>
+
+                <th id="details-heading"
+                    scope="colgroup"
+                    colspan="3">
+                    Характеристики
+                </th>
+
+                <th id="right-heading" scope="col" rowspan="2">
+                    №
+                </th>
+            </tr>
+
+            <tr valign="middle"
+                style="height: 35px;"
+                title="Підзаголовки таблиці"
+                lang="uk">
+
+                <th id="model-heading" scope="col">
+                    Модель
+                </th>
+
+                <th id="purpose-heading" scope="col">
+                    Призначення
+                </th>
+
+                <th id="type-heading" scope="col">
+                    Тип
+                </th>
+
+                <th id="cpu-heading" scope="col">
+                    Процесор
+                </th>
+
+                <th id="ram-heading" scope="col">
+                    Оперативна пам'ять
+                </th>
+
+                <th id="price-heading" scope="col">
+                    Ціна
+                </th>
+            </tr>
+        </thead>
+
+<tbody id="main-products" align="center" valign="middle">
+
+    <tr valign="middle" style="background-color: #1b3a56; color: #eaf4ff;"
+        title="Основні цінні папери" lang="uk">
+        <td rowspan="2" id="number-1">1</td>
+        <td colspan="2" id="group-1">Акції технологічних компаній</td>
+        <td rowspan="2">A</td>
+        <td>12.50%</td>
+        <td>10 000 грн</td>
+        <td>Високий</td>
+        <td>Технологічний сектор</td>
+    </tr>
+
+    <tr valign="middle" style="background-color: #10263b; color: #eaf4ff;"
+        title="Акції Технології" lang="uk">
+        <td>Акції Технології</td>
+        <td>Акції</td>
+        <td>12.50%</td>
+        <td>10 000 грн</td>
+        <td>Високий</td>
+        <td>Тестові акції технологічного сектору</td>
+    </tr>
+
+    <tr valign="middle" title="Облігації Розвиток" lang="uk">
+        <td>2</td>
+        <td>Облігації Розвиток</td>
+        <td>Облігації</td>
+        <td>AA</td>
+        <td>8.20%</td>
+        <td>5 000 грн</td>
+        <td>Низький</td>
+        <td>Облігації компанії</td>
+    </tr>
+
+    <tr valign="middle" title="Акції Енерго" lang="uk">
+        <td>3</td>
+        <td>Акції Енерго</td>
+        <td>Акції</td>
+        <td>BBB</td>
+        <td>10.40%</td>
+        <td>7 000 грн</td>
+        <td>Середній</td>
+        <td>Енергетичний сектор</td>
+    </tr>
+
+    <tr valign="middle" title="Акції Медтех" lang="uk">
+        <td>4</td>
+        <td>Акції Медтех</td>
+        <td>Акції</td>
+        <td>A</td>
+        <td>15.00%</td>
+        <td>8 000 грн</td>
+        <td>Середній</td>
+        <td>Медичні технології</td>
+    </tr>
+
+</tbody>
+
+        <tbody id="additional-products" title="Додаткові цінні папери" lang="uk">
+
+    <tr style="background-color: #1b3a56; color: #eaf4ff;" title="Додаткові цінні папери" lang="uk">
+        <td>5</td>
+        <td colspan="3">Облігації та інші інвестиційні інструменти</td>
+        <td>7.80%</td>
+        <td>2 500 грн</td>
+        <td>Низький</td>
+        <td>Додаткова категорія</td>
+    </tr>
+
+    <tr title="Облігації Міські" lang="uk">
+        <td>5</td>
+        <td>Облігації Міські</td>
+        <td>Облігації</td>
+        <td>Немає оцінки</td>
+        <td>7.80%</td>
+        <td>3 000 грн</td>
+        <td>Низький</td>
+        <td>Муніципальні облігації</td>
+    </tr>
+
+    <tr title="Акції Агро" lang="uk">
+        <td>6</td>
+        <td>Акції Агро</td>
+        <td>Акції</td>
+        <td>BBB</td>
+        <td>9.30%</td>
+        <td>4 000 грн</td>
+        <td>Середній</td>
+        <td>Сільське господарство</td>
+    </tr>
+
+    <tr title="Фонд Інновації" lang="uk">
+        <td>7</td>
+        <td>Фонд Інновації</td>
+        <td>Інвестиційний фонд</td>
+        <td>Немає оцінки</td>
+        <td>13.20%</td>
+        <td>6 000 грн</td>
+        <td>Високий</td>
+        <td>Інноваційні проєкти</td>
+    </tr>
+
+    <tr title="Облігації Стабільність" lang="uk">
+        <td>8</td>
+        <td>Облігації Стабільність</td>
+        <td>Облігації</td>
+        <td>AA</td>
+        <td>7.80%</td>
+        <td>2 500 грн</td>
+        <td>Низький</td>
+        <td>Стабільний інвестиційний інструмент</td>
+    </tr>
+
+</tbody>
+
+        <tfoot>
+            <tr valign="middle"
+                style="height: 40px;"
+                title="Підсумкова інформація"
+                lang="uk">
+
+                <td colspan="8" class="table-footer">
+                    ComputerZone — каталог комп'ютерної техніки
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Додаткова таблиця товарів -->
+
+    <h2>Комп'ютерні комплектуючі</h2>
+
+    <table class="components-table">
+        <caption>Прайс-лист комплектуючих</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Назва</th>
+                <th scope="col">Модель</th>
+                <th scope="col">Ціна</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Відеокарта</td>
+                <td>GeForce RTX 4060</td>
+                <td>15 000 грн</td>
+            </tr>
+            <tr>
+                <td>Процесор</td>
+                <td>Intel Core i5</td>
+                <td>8 000 грн</td>
+            </tr>
+            <tr>
+                <td>Оперативна пам'ять</td>
+                <td>DDR5 16 GB</td>
+                <td>2 500 грн</td>
+            </tr>
+        </tbody>
+    </table>
+
+</main>
+
+<footer>
+    <p>© 2026 ComputerZone. Усі права захищені.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1562 @@
+/* ================================
+   ЛАБОРАТОРНА РОБОТА №2
+   Таблиця каскадних стилів
+   ComputerZone
+   ================================ */
+
+/* Універсальний селектор */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Селектор ідентифікатора */
+#author-info {
+    color: #48a9ff !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Основні стилі сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #071525;
+    color: #eaf4ff;
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    background-color: #0b213b;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom-width: thin;
+    border-bottom-color: #21486d;
+    border-bottom-style: solid;
+
+    position: relative;
+    z-index: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pc-icon {
+    width: 55px;
+    height: 42px;
+
+    border-left-width: medium;
+    border-right-width: medium;
+    border-color: #48a9ff;
+    border-style: outset;
+
+    position: relative;
+    background-color: #102f50;
+}
+
+/* Псевдоелемент */
+.pc-icon::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #48a9ff;
+    bottom: -9px;
+    left: 12px;
+}
+
+/* Контекстний селектор */
+nav a {
+    color: #dcecff;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: bold;
+}
+
+/* Сусідній селектор */
+nav a + a {
+    margin-left: 28px;
+}
+
+/* Псевдоклас */
+nav a:hover {
+    color: #48a9ff;
+}
+
+/* :active */
+nav a:active {
+    color: white;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    max-width: 1100px;
+    min-width: 300px;
+    min-height: 390px;
+
+    padding: 60px;
+
+    border-color: #245982;
+    border-style: groove;
+
+    background-color: #0d3155;
+    background-image: linear-gradient(135deg, #0d3155, #092039);
+    background-attachment: scroll;
+    background-position: bottom;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    position: relative;
+    z-index: auto;
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* ::first-letter */
+.hero h1::first-letter {
+    color: #48a9ff;
+}
+
+/* ::first-line */
+.hero p::first-line {
+    color: #bfd3e6;
+}
+
+.hero p {
+    color: #b9cee2;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow: visible;
+}
+
+.hero-pc {
+    font-size: 130px;
+}
+
+.button {
+    display: inline;
+    margin-top: 28px;
+    padding: 14px 28px;
+
+    background-color: #1688d8;
+    color: white;
+
+    border-right-style: dotted;
+    border-right-color: #8bd2ff;
+
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* :hover */
+.button:hover {
+    background-color: #31a4f2;
+}
+
+/* ================================
+   SECTION
+   ================================ */
+
+.section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Перший дочірній елемент */
+.author > h3:first-child {
+    color: #48a9ff;
+}
+
+/* first-of-type */
+.author p:first-of-type {
+    line-height: 1.7;
+}
+
+/* last-of-type */
+.author p:last-of-type {
+    padding-bottom: 10px;
+}
+
+.author {
+    background-color: #0c2743;
+    padding: 30px;
+
+    border-color: #21486d;
+    border-style: groove;
+
+    line-height: 1.8;
+}
+
+.offer {
+    margin-top: 25px;
+    margin-bottom: auto;
+
+    padding: 25px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+
+    background-color: #0a1d32;
+
+    border-left-width: medium;
+    border-right-width: thin;
+    border-color: #2b9de8;
+    border-style: outset;
+}
+
+.old-price {
+    color: #849bb0;
+    font-size: 17px;
+}
+
+.new-price {
+    color: #55b9ff;
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-left: 12px;
+    margin-right: auto;
+}
+
+/* Атрибутний селектор [attr] */
+[title] {
+    outline-style: solid;
+    outline-color: #21486d;
+}
+
+/* Атрибутний селектор [attr=value] */
+[lang="uk"] {
+    direction: ltr;
+}
+
+/* Атрибутний селектор [attr~=value] */
+[title~="Інформація"] {
+    border-right-style: dotted;
+}
+
+/* ================================
+   ФОРМА
+   ================================ */
+
+.contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    padding: 25px;
+
+    background-color: #0b2139;
+
+    border-color: #285c83;
+    border-style: dotted;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    background-color: #102f50;
+    color: white;
+
+    border-color: #285c83;
+    border-style: solid;
+}
+
+/* :focus */
+.contact-form input:focus {
+    outline-style: solid;
+    outline-color: #48a9ff;
+}
+
+/* :invalid */
+.contact-form input:invalid {
+    border-color: #ff5555;
+}
+
+/* [type] */
+input[type] {
+    line-height: normal;
+}
+
+/* [type=value] */
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+}
+
+/* :checked */
+input[type="checkbox"]:checked {
+    outline-style: solid;
+    outline-color: #48a9ff;
+}
+
+/* ================================
+   COMPANY PAGE
+   ================================ */
+
+.container {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.intro {
+    padding: 50px;
+
+    border-color: #285c83;
+    border-style: groove;
+
+    background-color: #103b62;
+    background-image: linear-gradient(135deg, #103b62, #0a2038);
+    background-position: right;
+
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    position: relative;
+}
+
+.intro h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.intro p {
+    color: #bfd3e6;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.intro-icon {
+    font-size: 110px;
+}
+
+.info {
+    background-color: #0b2139;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    border-color: #21486d;
+    border-style: dotted;
+
+    line-height: 1.8;
+}
+
+.info p:first-of-type::first-letter {
+    font-size: 28px;
+    color: #48a9ff;
+}
+
+.technical {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    overflow: scroll;
+    max-height: 150px;
+}
+
+table {
+    width: 100%;
+    background-color: #0b2139;
+    display: table;
+    overflow: visible;
+}
+
+th {
+    background-color: #145486;
+    padding: 18px 12px;
+    text-align: left;
+
+    vertical-align: top;
+}
+
+td {
+    padding: 16px 12px;
+    border-bottom-width: thin;
+    border-bottom-color: #203e59;
+    border-bottom-style: dotted;
+
+    color: #cbdbea;
+    vertical-align: baseline;
+}
+
+/* Селектор сусідів */
+th + th {
+    border-left-width: thin;
+    border-left-color: #285c83;
+    border-left-style: dotted;
+}
+
+/* :hover */
+tr:hover {
+    background-color: #102f4e;
+}
+
+.badge {
+    background-color: #17699e;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* ================================
+   NEWS
+   ================================ */
+
+.news-hero {
+    min-height: 330px;
+    padding: 50px;
+
+    border-color: #285c83;
+    border-style: groove;
+
+    background-color: #0e3b62;
+    background-position: bottom;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.news-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.news-hero p {
+    color: #bfd3e6;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.news-icon {
+    font-size: 100px;
+}
+
+.date {
+    display: inline;
+    margin-bottom: 15px;
+    color: #54baff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-grid {
+    display: table;
+    width: 100%;
+}
+
+article {
+    background-color: #0b2139;
+
+    border-color: #21486d;
+    border-style: groove;
+
+    border-right-width: thin;
+
+    padding: 28px;
+    margin-bottom: 25px;
+
+    position: static;
+}
+
+article h2 {
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+article p {
+    color: #b8cadb;
+    line-height: 1.7;
+}
+
+/* first-of-type */
+article p:first-of-type::first-line {
+    color: #54baff;
+}
+
+/* last-of-type */
+article p:last-of-type {
+    margin-bottom: 10px;
+}
+
+aside {
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    background-color: #0a1c30;
+
+    padding: 28px;
+    padding-left: 35px;
+
+    border-left-width: medium;
+    border-left-color: #2699e4;
+    border-left-style: outset;
+
+    color: #b8cadb;
+
+    clear: left;
+}
+
+.tag {
+    display: inline;
+    background-color: #155b8b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #06111f;
+    color: #8198ad;
+
+    visibility: visible;
+}
+
+/* ================================
+   ДОДАТКОВІ ВЛАСТИВОСТІ
+   ================================ */
+
+/* float */
+.hero-pc,
+.intro-icon,
+.news-icon {
+    float: none;
+}
+
+/* clear */
+footer {
+    clear: none;
+}
+
+/* visibility */
+.separator {
+    visibility: visible;
+}
+
+/* overflow */
+.info {
+    overflow: visible;
+}
+
+/* clip */
+.pc-icon {
+    clip: rect(0, 55px, 42px, 0);
+}
+
+/* =========================================
+   ДОДАТКОВІ ВЛАСТИВОСТІ ЗА ВАРІАНТОМ
+   ========================================= */
+
+/* display */
+.display-inline {
+    display: inline;
+}
+
+.display-run-in {
+    display: run-in;
+}
+
+.display-table-row {
+    display: table-row;
+}
+
+.display-table-cell {
+    display: table-cell;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-table-column {
+    display: table-column;
+}
+
+/* position */
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* z-index */
+.position-relative {
+    z-index: auto;
+}
+
+/* float */
+.float-left {
+    float: left;
+}
+
+.float-none {
+    float: none;
+}
+
+/* clear */
+.clear-none {
+    clear: none;
+}
+
+.clear-left {
+    clear: left;
+}
+
+/* unicode-bidi */
+.bidi-normal {
+    unicode-bidi: normal;
+}
+
+.bidi-override {
+    unicode-bidi: bidi-override;
+}
+
+/* line-height */
+.line-normal {
+    line-height: normal;
+}
+
+.line-custom {
+    line-height: 30px;
+}
+
+/* vertical-align */
+.align-baseline {
+    vertical-align: baseline;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+.align-text-top {
+    vertical-align: text-top;
+}
+
+/* overflow */
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* visibility */
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* background-position */
+.bg-bottom {
+    background-position: bottom;
+}
+
+.bg-right {
+    background-position: right;
+}
+
+/* background attachment */
+.bg-scroll {
+    background-attachment: scroll;
+}
+
+
+
+/* ==========================================
+   LABORATORY WORK 3 — VARIANT 2
+   Lists, menu and hyperlinks
+   ========================================== */
+
+.lists-page,
+.menu-page {
+    padding-top: 35px;
+}
+
+.lists-hero,
+.menu-hero {
+    padding: 35px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #103b62, #0a2038);
+    border: 1px solid #285c83;
+    border-radius: 14px;
+}
+
+.lists-hero h1,
+.menu-hero h1 {
+    color: #48a9ff;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.lists-hero p,
+.menu-hero p {
+    color: #bfd3e6;
+    line-height: 1.8;
+}
+
+.list-card,
+.menu-card {
+    padding: 28px;
+    margin-bottom: 25px;
+    background-color: #0b2139;
+    border: 1px solid #21486d;
+    border-radius: 12px;
+}
+
+.list-card h2,
+.menu-card h2 {
+    color: #48a9ff;
+    margin-bottom: 18px;
+}
+
+.list-card h2::before {
+    content: "› ";
+    color: #48a9ff;
+}
+
+/* Нумерований список */
+
+.number-list {
+    list-style-type: decimal;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style: decimal outside;
+    padding-left: 30px;
+    line-height: 2;
+    counter-reset: product-counter;
+}
+
+.number-list li {
+    padding-left: 5px;
+}
+
+.number-list li::before {
+    counter-increment: product-counter;
+    content: "";
+}
+
+/* Маркований список */
+
+.custom-list,
+.equipment-items {
+    list-style-type: circle;
+    list-style-image: none;
+    list-style-position: inside;
+    list-style: circle inside;
+    padding-left: 10px;
+    line-height: 2.1;
+}
+
+.custom-list li::marker,
+.equipment-items li::marker {
+    color: #48a9ff;
+}
+
+/* Список визначень */
+
+.definition-list dt {
+    color: #54baff;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.definition-list dd {
+    color: #bfd3e6;
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+/* Старий тег dir: зберігаємо його в HTML,
+   а відображення списку налаштовуємо через CSS. */
+
+.equipment-list {
+    display: block;
+    padding-left: 10px;
+    color: #bfd3e6;
+}
+
+.equipment-list ul {
+    margin-top: 8px;
+}
+
+/* Рядок marquee: рух забезпечується CSS-анімацією */
+
+.marquee-box {
+    overflow: hidden;
+    background: #103b62;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.moving-text {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Додатковий напис біля застарілого command */
+
+.command-example {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin: 12px 0;
+    background: #102f50;
+    border-radius: 6px;
+    color: #bfd3e6;
+}
+
+.command-example command {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #48a9ff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Навігаційні меню */
+
+.menu-links {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 5px;
+}
+
+.menu-links li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #102f50;
+    border-left: 3px solid #48a9ff;
+    border-radius: 6px;
+}
+
+.menu-links li::marker {
+    color: #48a9ff;
+}
+
+/* Посилання */
+
+.site-nav a,
+.menu-links a,
+.menu-card a,
+.back-link a,
+.list-card a {
+    color: #54baff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-nav a:hover,
+.menu-links a:hover,
+.menu-card a:hover,
+.back-link a:hover,
+.list-card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.list-card a:focus,
+.menu-card a:focus {
+    outline: 2px solid #48a9ff;
+    outline-offset: 3px;
+}
+
+.back-link {
+    margin: 25px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Адаптивність */
+
+@media (max-width: 700px) {
+    .lists-page,
+    .menu-page {
+        padding: 15px;
+    }
+
+    .lists-hero,
+    .menu-hero,
+    .list-card,
+    .menu-card {
+        padding: 20px;
+    }
+
+    .lists-hero h1,
+    .menu-hero h1 {
+        font-size: 28px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+
+
+/* =========================================
+   ЛАБОРАТОРНА РОБОТА №4
+   СТОРІНКА ТАБЛИЦЬ — ВАРІАНТ №2
+   ========================================= */
+
+/* Основна таблиця */
+
+#variant2-table {
+    display: table;
+    width: 100%;
+    margin: 25px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 4px;
+    empty-cells: show;
+    caption-side: top;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #48a9ff;
+
+    color: #ffffff;
+    background-color: #10243a;
+}
+
+/* Заголовок таблиці */
+
+#variant2-table caption {
+    display: table-caption;
+    caption-side: top;
+    padding: 14px;
+    color: #48a9ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Група стовпців */
+
+#variant2-table colgroup {
+    display: table-column-group;
+}
+
+#variant2-table col {
+    display: table-column;
+}
+
+#variant2-table .narrow-column {
+    width: 5%;
+}
+
+#variant2-table .wide-column {
+    width: 17%;
+}
+
+#variant2-table .normal-column {
+    width: 12%;
+}
+
+/* Заголовкова частина */
+
+#variant2-table thead {
+    display: table-header-group;
+}
+
+#variant2-table thead th {
+    background-color: #183a58;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Основні групи рядків */
+
+#variant2-table tbody {
+    display: table-row-group;
+}
+
+#variant2-table tr {
+    display: table-row;
+}
+
+/* Комірки */
+
+#variant2-table th,
+#variant2-table td {
+    display: table-cell;
+    padding: 10px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #48a9ff;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Тіло таблиці */
+
+#variant2-table tbody tr:nth-child(even) {
+    background-color: #16314c;
+}
+
+#variant2-table tbody tr:hover {
+    background-color: #245078;
+}
+
+/* Номерні комірки */
+
+#variant2-table .number-cell {
+    background-color: #183a58;
+    font-weight: bold;
+}
+
+/* Нижня частина таблиці */
+
+#variant2-table tfoot {
+    display: table-footer-group;
+}
+
+#variant2-table .table-footer {
+    background-color: #183a58;
+    color: #48a9ff;
+    font-weight: bold;
+}
+
+/* Властивість для озвучення заголовків таблиці */
+#variant2-table th {
+    speak-header: once;
+}
+
+/* =========================================
+   ДОДАТКОВА ТАБЛИЦЯ КОМПЛЕКТУЮЧИХ
+   ========================================= */
+
+.components-table {
+    display: inline-table;
+    width: 100%;
+    margin: 25px auto;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 4px;
+    empty-cells: show;
+    caption-side: top;
+
+    border: 2px solid #48a9ff;
+    color: #ffffff;
+    background-color: #10243a;
+}
+
+.components-table caption {
+    display: table-caption;
+    padding: 12px;
+    color: #48a9ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.components-table thead {
+    display: table-header-group;
+}
+
+.components-table tbody {
+    display: table-row-group;
+}
+
+.components-table tr {
+    display: table-row;
+}
+
+.components-table th,
+.components-table td {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #48a9ff;
+    text-align: center;
+}
+
+.components-table th {
+    background-color: #183a58;
+}
+
+.components-table tr:hover {
+    background-color: #245078;
+}
+
+/* Додаткові приклади типів відображення таблиць */
+
+.table-row-example {
+    display: table-row;
+}
+
+.table-cell-example {
+    display: table-cell;
+}
+
+.table-column-group-example {
+    display: table-column-group;
+}
+
+.table-column-example {
+    display: table-column;
+}
+
+.table-row-group-example {
+    display: table-row-group;
+}
+
+.table-header-group-example {
+    display: table-header-group;
+}
+
+.table-footer-group-example {
+    display: table-footer-group;
+}
+
+.table-caption-example {
+    display: table-caption;
+}
+
+
+
+/* ==========================================
+   LABORATORY WORK 5 — FORMS
+   ComputerZone
+   ========================================== */
+
+.forms-page {
+    font-family: sans-serif;
+}
+
+.forms-container {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.forms-hero {
+    padding: 35px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #103b62, #0a2038);
+    border: 1px solid #285c83;
+    border-radius: 14px;
+}
+
+.forms-hero h1 {
+    color: #48a9ff;
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.forms-hero p {
+    color: #bfd3e6;
+    line-height: 1.7;
+}
+
+.computer-form {
+    padding: 25px;
+    background-color: #0b2139;
+    border: 1px solid #285c83;
+    border-radius: 12px;
+}
+
+.form-fieldset {
+    padding: 22px;
+    margin-bottom: 25px;
+    border: 1px solid #285c83;
+    border-radius: 8px;
+}
+
+.form-fieldset legend {
+    padding: 8px 12px;
+    font-family: Times, serif;
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.computer-form label {
+    display: block;
+    margin: 14px 0 7px;
+    color: #dcecff;
+    font-family: 'Arial Narrow', sans-serif;
+    font-stretch: condensed;
+}
+
+.computer-form input:not([type="checkbox"]):not([type="image"]),
+.computer-form select,
+.computer-form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    background-color: #102f50;
+    border: 1px solid #285c83;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 15px;
+}
+
+.computer-form input[type="checkbox"] {
+    width: auto;
+    accent-color: #48a9ff;
+}
+
+.computer-form input[type="color"] {
+    width: 80px;
+    height: 45px;
+    padding: 3px;
+}
+
+.computer-form input[type="range"] {
+    accent-color: #48a9ff;
+}
+
+.computer-form input[type="file"] {
+    padding: 8px;
+}
+
+.computer-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.computer-form input:focus,
+.computer-form select:focus,
+.computer-form textarea:focus {
+    outline: 2px solid #48a9ff;
+    outline-offset: 2px;
+}
+
+.computer-form input:invalid:not(:placeholder-shown) {
+    border-color: #ff5555;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.checkbox-line label {
+    display: inline;
+    margin: 0;
+}
+
+.form-output {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    background: #17699e;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.order-meter {
+    width: 100%;
+    height: 25px;
+}
+
+.form-details {
+    padding: 15px;
+    color: #bfd3e6;
+    background: #102f50;
+    border-radius: 6px;
+}
+
+.form-details summary {
+    color: #54baff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-search-section,
+.image-map-section,
+.legacy-elements {
+    padding: 25px;
+    margin: 25px 0;
+    background: #0b2139;
+    border: 1px solid #285c83;
+    border-radius: 10px;
+}
+
+.form-search-section h2,
+.image-map-section h2,
+.legacy-elements h2 {
+    margin-bottom: 15px;
+    color: #48a9ff;
+    font-size: 24px;
+}
+
+.form-search-section p {
+    margin: 10px 0 18px;
+    color: #bfd3e6;
+}
+
+.image-map-section svg {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.form-buttons button {
+    padding: 12px 22px;
+    color: white;
+    background: #1769a6;
+    border: 1px solid #48a9ff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background: #248bc9;
+}
+
+.form-buttons input[type="image"] {
+    object-fit: contain;
+}
+
+.form-message {
+    min-height: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.form-message.success {
+    color: #55d69e;
+}
+
+.form-message.error {
+    color: #ff7777;
+}
+
+.speech-examples {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #bfd3e6;
+}
+
+/* ==========================================
+   ШРИФТИ ТА ТЕКСТОВІ ВЛАСТИВОСТІ
+   ========================================== */
+
+.forms-hero p {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size-adjust: 0.5;
+    font-style: normal;
+    font-stretch: extra-expanded;
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.form-fieldset p {
+    font-family: Times, serif;
+    font-size: 16px;
+}
+
+.form-search-section h2 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-weight: 800;
+    text-indent: 2%;
+    text-shadow: #000000 2px 2px 3px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.speech-examples {
+    white-space: pre;
+    font: status-bar;
+}
+
+/* ==========================================
+   ВЛАСТИВОСТІ ДЛЯ ДРУКУ ТА СТОРІНОК
+   ========================================== */
+
+@page {
+    size: auto;
+    marks: none;
+}
+
+@media print {
+    .form-fieldset,
+    .forms-hero,
+    .form-search-section {
+        page-break-inside: avoid;
+    }
+
+    body {
+        page: auto;
+        widows: 3;
+        orphans: 3;
+    }
+
+    .form-buttons {
+        display: none;
+    }
+}
+
+/* ==========================================
+   ЗВУКОВІ ТА МОВЛЕННЄВІ CSS-ВЛАСТИВОСТІ
+   Навчальні приклади за завданням
+   ========================================== */
+
+.speech-examples {
+    volume: 50%;
+    volume: x-soft;
+    cue: url("notification.wav");
+    play-during: url("background.wav") mix repeat;
+    cue-after: url("notification.wav");
+    pause-before: 1s;
+    azimuth: center;
+    azimuth: leftwards;
+    elevation: below;
+    speech-rate: x-fast;
+    speech-rate: faster;
+    voice-family: sans-serif;
+    stress: 50;
+    pitch: x-low;
+    speak-numeral: continuous;
+    speak: normal;
+}
+
+/* ==========================================
+   АДАПТИВНІСТЬ
+   ========================================== */
+
+@media (max-width: 700px) {
+    .forms-container {
+        padding: 0 12px;
+    }
+
+    .forms-hero {
+        padding: 22px;
+    }
+
+    .forms-hero h1 {
+        font-size: 27px;
+    }
+
+    .computer-form {
+        padding: 14px;
+    }
+
+    .form-fieldset {
+        padding: 14px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
