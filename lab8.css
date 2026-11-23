@@ -1,0 +1,141 @@
+
+/* ==========================================
+   ЛАБОРАТОРНА РОБОТА №8
+   РАСТРОВА ГРАФІКА CANVAS
+   COMPUTERZONE
+   ========================================== */
+
+.lab8-page {
+    background-color: #071525;
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+}
+
+.lab8-container {
+    width: 84%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.lab8-title {
+    color: #48a9ff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lab8-description {
+    text-align: center;
+    color: #b9cee2;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.lab8-section {
+    background-color: #0b213b;
+    border: 1px solid #285477;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.lab8-section h2 {
+    color: #48a9ff;
+    margin-bottom: 20px;
+}
+
+.lab8-section p,
+.lab8-section li {
+    line-height: 1.7;
+}
+
+.lab8-section ul {
+    padding-left: 25px;
+}
+
+.lab8-section li {
+    margin-bottom: 8px;
+}
+
+/* Полотно Canvas */
+
+.canvas-frame {
+    width: 100%;
+    max-width: 720px;
+    margin: 25px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #285477;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#drawingCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px dashed #e05252;
+    cursor: crosshair;
+}
+
+/* Кнопки керування */
+
+.canvas-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.canvas-controls button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1769a6;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.canvas-controls button:hover {
+    background-color: #248bd5;
+}
+
+.canvas-status {
+    margin-top: 18px;
+    text-align: center;
+    color: #48a9ff;
+    font-weight: bold;
+}
+
+.canvas-hint {
+    margin-top: 10px;
+    text-align: center;
+    color: #b9cee2;
+    font-size: 14px;
+}
+
+/* Адаптивність */
+
+@media (max-width: 750px) {
+
+    .lab8-container {
+        width: 94%;
+    }
+
+    .lab8-section {
+        padding: 15px;
+    }
+
+    .canvas-controls {
+        flex-direction: column;
+    }
+
+    .canvas-controls button {
+        width: 100%;
+    }
+
+}
